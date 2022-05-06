@@ -1,0 +1,607 @@
+/* https://www.youtube.com/playlist?list=PLnD96kXp-_pMo0m5hAltTJmrTAaMdxWFF */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Rakkas&display=swap");
+body {
+  direction: rtl;
+  font-family: system-ui;
+  min-height: 1000px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 36px;
+  border: 1px solid;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000;
+}
+::-webkit-scrollbar-track {
+  background: #000000ba;
+}
+::selection {
+  background-color: greenyellow;
+  color: #000;
+}
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+header .container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+header .logo {
+  margin: 10px auto;
+  font-size: 20px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul li {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+}
+header ul li::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  background: #000;
+  border-bottom: 2px solid;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+}
+header ul li a {
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+header ul li:hover a {
+  color: #123450;
+}
+header ul li:hover,
+header ul li.active {
+  background-color: #12345021;
+}
+header ul li.active a {
+  color: #123450;
+}
+header ul li:hover:after,
+header ul li.active::after {
+  width: 100%;
+}
+.menuBar {
+  display: none;
+}
+
+/* main section */
+.main {
+  background-image: url("../imgs/mosque04.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+.main .container {
+  min-height: 100vh;
+}
+.main .title {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 2%;
+  margin: auto;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #ffffff14;
+}
+.main .title h2 {
+  margin: 2% 0;
+  font-size: 30px;
+  font-family: "Amiri", serif;
+  line-height: 2;
+}
+.main .title .btn {
+  transition: all 0.5s;
+
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #000 0,
+    #151a3ec4 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px,
+    rgb(58 65 111 / 50%) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Amiri";
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.main .title .btn:hover {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+}
+/* Hadith section */
+.Hadith {
+  padding: 9%;
+}
+.title-section {
+  text-align: center;
+  position: relative;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  color: #1fb145;
+}
+
+.title-section::after {
+  content: "";
+  position: absolute;
+  background-color: green;
+  width: 15%;
+  bottom: -40%;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title-section::before {
+  content: "";
+  position: absolute;
+  background-color: #123450;
+  width: 0%;
+  bottom: -9%;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+}
+.title-section:hover::before {
+  width: 20%;
+}
+.Hadith .hadithContainer {
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  width: 90%;
+  border: 1px solid;
+  padding: 5%;
+  margin: 10px auto;
+  line-height: 2.5;
+  text-align: right;
+  font-family: "Amiri";
+  font-size: 20px;
+}
+.Hadith .buttons {
+  position: relative;
+  margin: auto;
+}
+.Hadith .buttons .pre,
+.Hadith .buttons .next {
+  position: absolute;
+  width: 10%;
+  background: green;
+  text-align: center;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+
+  background: linear-gradient(
+    0deg,
+    rgba(20, 167, 62, 1) 0%,
+    rgba(102, 247, 113, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.Hadith .buttons .pre {
+  left: 0;
+}
+.Hadith .buttons .next {
+  right: 0;
+}
+.Hadith .buttons .pre:hover,
+.Hadith .buttons .next:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(20, 167, 62, 1) 0%,
+    rgb(21 151 31) 100%
+  );
+}
+.Hadith .buttons .number {
+  position: absolute;
+  left: 50%;
+}
+/*  */
+.Lectures {
+}
+.Lectures .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Lectures .container .left-side {
+  width: 48%;
+}
+.Lectures .container .left-side iframe {
+  width: 100%;
+  height: 100%;
+}
+.Lectures .container .right-side {
+  width: 48%;
+}
+.Lectures .container .right-side .lec {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  border: 1px solid #000;
+  align-content: flex-start;
+  margin: 10px 0;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+.Lectures .container .right-side .lec:hover {
+  border: 1.5px solid green;
+}
+.Lectures .container .right-side .lec .lec-text {
+}
+.Lectures .container .right-side .lec .lec-text h4 {
+}
+.Lectures .container .right-side .lec .lec-text h4 a {
+  color: green;
+}
+.Lectures .container .right-side .lec .lec-text h4 a:hover {
+  color: #29e829;
+}
+.Lectures .container .right-side .lec .lec-text p {
+}
+.Lectures .container .right-side .lec .lec-img {
+  width: 100px;
+}
+.Lectures .container .right-side .lec .lec-img img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/*  */
+.Quran {
+}
+.Quran .container,
+.time-of-pray .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Quran .container .surah,
+.time-of-pray .card {
+  cursor: pointer;
+  width: 12%;
+  border: 1px solid;
+  text-align: center;
+  padding: 1%;
+  line-height: 2;
+  margin: 10px 5px;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+}
+
+.Quran .container .surah p,
+.card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+
+.Quran .container .surah:hover {
+  color: #29e829;
+  background: #000;
+}
+/*  */
+.popUp {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  height: 100vh;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  overflow: scroll;
+  /*  */
+  transform: scale(0);
+  /*  */
+}
+
+.popUp::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.popUp::-webkit-scrollbar-thumb {
+  background: #29e829;
+  border-radius: 36px;
+  border: 1px solid;
+}
+.popUp::-webkit-scrollbar-thumb:hover {
+  background-color: #1fb145;
+}
+.popUp::-webkit-scrollbar-track {
+  background: #1c1010;
+}
+.popUp .container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 8% auto;
+}
+.popUp .container .ayah {
+  border: 1px solid;
+  width: 100%;
+  margin: 10px 0;
+  padding: 1%;
+}
+.popUp .container .ayah h2 {
+  line-height: 2;
+}
+.popUp .close-ayah {
+  position: fixed;
+  top: 5%;
+  right: 4%;
+}
+.popUp .close-ayah svg {
+  width: 2rem;
+  height: 3rem;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.popUp .close-ayah svg:hover {
+  fill: red;
+}
+/* .popUp svg:hover path {
+  transform: rotate(360deg);
+} */
+/*  */
+.time-of-pray {
+}
+/* .time-of-pray .container {
+}
+*/
+.time-of-pray .container .card {
+  width: 25%;
+}
+/*  */
+.Contact {
+  position: relative;
+}
+.Contact .social {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  /* background: #0006; */
+  transform: translate(-50%);
+}
+.Contact .social .contact {
+}
+.Contact .social .contact a {
+  padding: 1%;
+  margin: 10px;
+  width: 11%;
+}
+.Contact .social .contact .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.Contact .social .contact .icons svg:hover {
+  transform: rotate(360deg);
+}
+.Contact .social .contact .icons svg {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  background: #fff;
+}
+.Contact svg.wave {
+  width: 100%;
+  border: 0.1px solid;
+  position: relative;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Contact .wave path {
+  fill: #29e829;
+}
+/*  */
+
+/*  */
+.fixed {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #1fb145;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  filter: drop-shadow(2px 4px 6px #000);
+  -webkit-filter: drop-shadow(2px 4px 6px #000);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.fixed:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+  -webkit-animation: pulse 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulse {
+  /* 0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.2);
+    } */
+  70% {
+    transform: translateY(0%);
+    background-color: green;
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(5%);
+    -webkit-transform: translateY(5%);
+    -moz-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    -o-transform: translateY(5%);
+  }
+  /* https://codepen.io/nelledejones/pen/gOOPWrK */
+}
+/*  */
+@media (max-width: 700px) {
+  .Lectures .container .left-side,
+  .Lectures .container .right-side {
+    width: 100%;
+  }
+  .Quran .container .surah {
+    width: 20%;
+  }
+}
+/*  */
+@media (max-width: 1199px) {
+  header ul li,
+  .Hadith .buttons .pre,
+  .Hadith .buttons .next,
+  header .logo {
+    font-size: 80%;
+  }
+}
+/* https://www.youtube.com/playlist?list=PLnD96kXp-_pMo0m5hAltTJmrTAaMdxWFF */

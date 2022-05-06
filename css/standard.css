@@ -1,0 +1,67 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: ease all 0.5s;
+  -webkit-transition: ease all 0.5s;
+  -moz-transition: ease all 0.5s;
+  -ms-transition: ease all 0.5s;
+  -o-transition: ease all 0.5s;
+}
+
+:root {
+  --main-color: #247cff;
+  --second-color: #2b5464;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+svg {
+  width: 20px;
+  height: 20px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+::selection {
+  background-color: var(--second-color);
+  color: white;
+}
